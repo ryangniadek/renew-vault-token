@@ -1,4 +1,4 @@
-# Renew HashiCorp Vault
+# Renew HashiCorp Vault Token
 An Ansible Playbook to renew a HashiCorp Vault token using the REST API
 
 ## Usage
@@ -26,7 +26,7 @@ ansible-playbook renew.yml -e @vault.yml --ask-vault-pass
 
 ## Usage in AAP
 To run on Ansible Automation Platform without a custom credential type:
-1) Create a new job template with `renew.yml` as the playbook`
+1) Create a new job template with `renew.yml` as the playbook
 2) Add `vault_address` as an extra var and set the default value appropriately
 3) Add a survey question (type: password) that assigns it's value to `vault_token` and set the default value appropriately (this will ensure the token is encrypted)
 4) Set a schedule for the job template to run on the desired interval
